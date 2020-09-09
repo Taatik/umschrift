@@ -1,6 +1,6 @@
 {
   "name": "umschrift",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "a package for transliterating Hebrew to German",
   "main": "index.js",
   "scripts": {
