@@ -8,6 +8,7 @@ describe.each`
   ${"furtive patach, ayin"} | ${"שָׁמֵ֑עַ"} | ${"schamea"}
   ${"furtive patach, he"}   | ${"גָבֹ֗הַּ"} | ${"gawoa"}
   ${"final qamets-he"}      | ${"מַלְכָּה"} | ${"malka"}
+  ${"divine name"}          | ${"יְהוָ֣ה"}  | ${"Adonaj"}
 `("$description", ({ description, hebrew, transliteration }) => {
   const heb = new Text(hebrew);
   const transliteratedHeb = heb.transliterate();
