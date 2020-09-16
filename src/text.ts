@@ -1,7 +1,7 @@
 import { Text } from "havarot";
 import { Word } from "havarot/dist/word";
 import { Syllable } from "havarot/dist/syllable";
-import { syllableRules } from "./rules";
+import { syllableRules, wordRules } from "./rules";
 
 // AUGMENT CLASSES
 declare module "havarot/dist/syllable" {
@@ -24,7 +24,8 @@ declare module "havarot/dist/word" {
 
 Word.prototype.transliterate = function (): string {
   const transliteratedArr = this.syllables.map((syl) => syl.transliterate());
-  const transliteration = transliteratedArr.reduce((a, c) => a + c, "");
+  const transliteratedWord = transliteratedArr.reduce((a, c) => a + c, "");
+  const transliteration = wordRules(transliteratedWord);
   return transliteration;
 };
 

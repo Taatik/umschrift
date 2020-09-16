@@ -121,3 +121,10 @@ export const syllableRules = (syl: Syllable): string => {
 
   return txt;
 };
+
+export const wordRules = (word: string): string => {
+  if (word === "jehwa") {
+    word = "Adonaj";
+  }
+  return word;
+};
