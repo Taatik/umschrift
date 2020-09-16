@@ -11,7 +11,7 @@
   "author": "charlesLoder",
   "license": "MIT",
   "dependencies": {
-    "havarot": "file:havarot-0.0.3.tgz"
+    "havarot": "file:havarot-0.1.1.tgz"
   },
   "devDependencies": {
     "@types/jest": "^26.0.13",
