@@ -1,10 +1,10 @@
-import { Text } from "havarot";
-import { Word } from "havarot/dist/word";
-import { Syllable } from "havarot/dist/syllable";
+import { Text } from "havarotjs";
+import { Word } from "havarotjs/dist/word";
+import { Syllable } from "havarotjs/dist/syllable";
 import { syllableRules, wordRules } from "./rules";
 
 // AUGMENT CLASSES
-declare module "havarot/dist/syllable" {
+declare module "havarotjs/dist/syllable" {
   interface Syllable {
     transliterate(): string;
   }
@@ -16,7 +16,7 @@ Syllable.prototype.transliterate = function (): string {
   return transliteration;
 };
 
-declare module "havarot/dist/word" {
+declare module "havarotjs/dist/word" {
   interface Word {
     transliterate(): string;
   }
@@ -29,7 +29,7 @@ Word.prototype.transliterate = function (): string {
   return transliteration;
 };
 
-declare module "havarot/dist/text" {
+declare module "havarotjs/dist/text" {
   interface Text {
     transliterate(): string;
   }

@@ -1,4 +1,4 @@
-import { Syllable } from "havarot/dist/syllable";
+import { Syllable } from "havarotjs/dist/syllable";
 import { transliterateMap } from "./hebCharTrans";
 
 const changeElementSplit = (input: string, split: RegExp, join: string) =>
