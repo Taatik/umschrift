@@ -3,26 +3,34 @@
 A tool for transliterating liturgical Hebrew texts to German.
 It is an augmentation of [havarot](https://github.com/charlesLoder/havarot).
 
+## about
+
+This schema for transliteration was developed by Rabbi Zsolt.
+Its purpose is to transliterate litrugical Hebrew into German orthography.
+
 ## install
 
-Requirements:
+### npm
 
-- `node`
-- `npm`
+`npm install umschrift`
 
-To check for these, in you terminal type `which node` and `which npm`.
-If nothing is returned, you'll need to install `node`, which installs `npm` along with it.
+### local
 
-Download this repo.
+Download or clone this repository.
 
 ```bash
-cd umschrift
-npm install # installs the necessary dependencies
-npm run build # creates ./dist directory
+cd unschrift
+npm install
+npm run build
 ```
 
 ## example
 
-There is an `./example` directory containing a `.txt` file of Psa 23:1-4, and a file for using `umschrift`.
-Once the `./dist` directory has been created, you can run `node ./examples/example.js`.
-This will create a `psa23.1-4-TRANSLITERATION.txt` file.
+```javascript
+const umschrift = require("umschrift");
+const Text = umschrift.Text;
+const heb = new Text("שָׁלֹום");
+const transliteration = heb.transliterate();
+transliteration;
+// schalom
+```
