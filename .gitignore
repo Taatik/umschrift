@@ -11,8 +11,9 @@ config.gypi
 CVS
 npm-debug.log
 node_modules
-# *.tgz
+*.tgz
 package-lock.json
 /.vscode
 /dist
+/example
 *-TRANSLITERATION.txt
