@@ -1,6 +1,6 @@
 {
   "name": "umschrift",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a package for transliterating Hebrew to German",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,16 @@
     "jest": "^26.4.2",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlesLoder/umschrift.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charlesLoder/umschrift/issues"
+  },
+  "homepage": "https://github.com/charlesLoder/umschrift"
 }
