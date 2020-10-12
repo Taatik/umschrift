@@ -1,6 +1,6 @@
 {
   "name": "umschrift",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "a package for transliterating Hebrew to German",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,7 @@
   "author": "charlesLoder",
   "license": "MIT",
   "dependencies": {
-    "havarotjs": "^0.1.1"
+    "havarotjs": "^0.3.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",

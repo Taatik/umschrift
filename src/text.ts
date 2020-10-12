@@ -1,7 +1,7 @@
 import { Text } from "havarotjs";
 import { Word } from "havarotjs/dist/word";
 import { Syllable } from "havarotjs/dist/syllable";
-import { syllableRules, wordRules } from "./rules";
+import { syllableRules } from "./rules";
 
 // AUGMENT CLASSES
 declare module "havarotjs/dist/syllable" {
@@ -23,9 +23,11 @@ declare module "havarotjs/dist/word" {
 }
 
 Word.prototype.transliterate = function (): string {
+  if (this.isDivineName) {
+    return "Adonaj";
+  }
   const transliteratedArr = this.syllables.map((syl) => syl.transliterate());
-  const transliteratedWord = transliteratedArr.reduce((a, c) => a + c, "");
-  const transliteration = wordRules(transliteratedWord);
+  const transliteration = transliteratedArr.reduce((a, c) => a + c, "");
   return transliteration;
 };
 
@@ -36,10 +38,12 @@ declare module "havarotjs/dist/text" {
 }
 
 Text.prototype.transliterate = function (): string {
-  const transliteratedArr = this.words.map((word) => word.transliterate());
-  const transliteration = transliteratedArr
-    .reduce((a, c) => `${a}${c} `, "")
-    .trim();
+  const transliterationArr = this.words.map((word) => {
+    return `${word.whiteSpaceBefore}${word.transliterate()}${
+      word.whiteSpaceAfter
+    }`;
+  });
+  const transliteration = transliterationArr.reduce((a, c) => a + c, "");
   return transliteration;
 };
 
