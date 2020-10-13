@@ -1,15 +1,16 @@
 import { Text } from "../src/index";
 
 describe.each`
-  description               | hebrew           | transliteration
-  ${"no special features"}  | ${"לֶ֬חֶם"}      | ${"lechem"}
-  ${"gemination"}           | ${"רַנֵּן"}      | ${"ranen"}
-  ${"furtive patach, chet"} | ${"מָשִׁיחַ"}    | ${"maschiach"}
-  ${"furtive patach, ayin"} | ${"שָׁמֵ֑עַ"}    | ${"schamea"}
-  ${"furtive patach, he"}   | ${"גָבֹ֗הַּ"}    | ${"gawoa"}
-  ${"final qamets-he"}      | ${"מַלְכָּה"}    | ${"malka"}
-  ${"divine name"}          | ${"יְהוָ֣ה"}     | ${"Adonaj"}
-  ${"3ms suffix"}           | ${"תֹּורֹתָֽיו"} | ${"torotaw"}
+  description                            | hebrew           | transliteration
+  ${"no special features"}               | ${"לֶ֬חֶם"}      | ${"lechem"}
+  ${"gemination"}                        | ${"רַנֵּן"}      | ${"ranen"}
+  ${"furtive patach, chet"}              | ${"מָשִׁיחַ"}    | ${"maschiach"}
+  ${"furtive patach, ayin"}              | ${"שָׁמֵ֑עַ"}    | ${"schamea"}
+  ${"furtive patach, he"}                | ${"גָבֹ֗הַּ"}    | ${"gawoa"}
+  ${"final chet w/ patach, NOT furtive"} | ${"מִתַּ֣חַת"}   | ${"mitachat"}
+  ${"final qamets-he"}                   | ${"מַלְכָּה"}    | ${"malka"}
+  ${"divine name"}                       | ${"יְהוָ֣ה"}     | ${"Adonaj"}
+  ${"3ms suffix"}                        | ${"תֹּורֹתָֽיו"} | ${"torotaw"}
 `("$description", ({ description, hebrew, transliteration }) => {
   const heb = new Text(hebrew);
   const transliteratedHeb = heb.transliterate();
