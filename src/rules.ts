@@ -63,7 +63,7 @@ export const syllableRules = (syl: Syllable): string => {
         clusterTrans = clusterTrans.replace(shewa, "");
       }
 
-      if (syl.isFinal) {
+      if (syl.isFinal && !syl.isClosed) {
         const furtiveChet = /\u{05D7}\u{05B7}$/mu;
         const furtiveHe = /\u{05D4}\u{05BC}\u{05B7}$/mu;
 
