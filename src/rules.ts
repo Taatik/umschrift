@@ -51,7 +51,7 @@ export const syllableRules = (syl: Syllable): string => {
       }
 
       if (cluster.isMater) {
-        clusterTrans = "";
+        clusterTrans = /\u{05BE}/u.test(clusterTrans) ? "\u{05BE}" : "";
       }
 
       if (cluster.isShureq) {
