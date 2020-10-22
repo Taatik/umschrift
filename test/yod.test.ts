@@ -6,7 +6,7 @@ describe.each`
   ${"const yod with hiriq as vowel"}           | ${"יַיִן"}         | ${"jajin"}
   ${"hiriq yod: medial"}                       | ${"עִיר"}          | ${"ir"}
   ${"hiriq yod: final"}                        | ${"אֲנִי"}         | ${"ani"}
-  ${"hiriq yod: final with maqqef"}            | ${"וַֽיְהִי־כֵֽן"} | ${"wajhi-chen"}
+  ${"hiriq yod: final with maqqef"}            | ${"וַֽיְהִי־כֵֽן"} | ${"wajehi-chen"}
   ${"hiriq followed by const yod (fake word)"} | ${"רִיֵּם"}        | ${"rijem"}
   ${"medial tsere-yod"}                        | ${"אֵין"}          | ${"en"}
   ${"final tsere-yod"}                         | ${"רִגְעֵי"}       | ${"rige"}
