@@ -16,7 +16,7 @@
   "author": "charlesLoder",
   "license": "MIT",
   "dependencies": {
-    "havarotjs": "^0.4.1"
+    "havarotjs": "^0.4.2"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",
