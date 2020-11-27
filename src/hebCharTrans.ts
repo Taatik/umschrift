@@ -18,7 +18,7 @@ export const transliterateMap: Dict = {
   "\u{05BD}": "", // HEBREW POINT METEG (U+05BD)
   "\u{05BE}": "-", // HEBREW PUNCTUATION MAQAF (U+05BE)
   "\u{05BF}": "", // HEBREW POINT RAFE (U+05BF)
-  "\u{05C0}": "", // HEBREW PUNCTUATION PASEQ (U+05C0)
+  "\u{05C0}": "|", // HEBREW PUNCTUATION PASEQ (U+05C0)
   "\u{05C1}": "", // HEBREW POINT SHIN DOT (U+05C1)
   "\u{05C2}": "", // HEBREW POINT SIN DOT (U+05C2)
   "\u{05C3}": "", // HEBREW PUNCTUATION SOF PASUQ (U+05C3)
