@@ -5,6 +5,7 @@ describe.each`
   ${"vocal shewa"}  | ${"זְמָר"}   | ${"semar"}
   ${"silent shewa"} | ${"אַגְמֹן"} | ${"agmon"}
   ${"final shewa"}  | ${"לֵךְ"}    | ${"lech"}
+  ${"sqnmlwy form"} | ${"וַיְהִי"} | ${"wajhi"}
 `("$description", ({ description, hebrew, transliteration }) => {
   const heb = new Text(hebrew);
   const transliteratedHeb = heb.transliterate();

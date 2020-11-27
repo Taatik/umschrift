@@ -7,7 +7,7 @@ describe.each`
   ${"waw haser (holem proceeds waw)"}      | ${"שָׁלוֹם"}     | ${"schalom"}
   ${"shureq"}                              | ${"קוּם"}        | ${"kum"}
   ${"initial shureq"}                      | ${"וּבָם"}       | ${"uwam"}
-  ${"initial shureq followed by shewa"}    | ${"וּלְזַמֵּ֖ר"} | ${"ulesamer"}
+  ${"initial shureq followed by shewa"}    | ${"וּלְזַמֵּ֖ר"} | ${"ulsamer"}
   ${"Consonantal vav with holem as vowel"} | ${"עָוֹן"}       | ${"awon"}
 `("$description", ({ description, hebrew, transliteration }) => {
   const heb = new Text(hebrew);
