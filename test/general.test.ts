@@ -11,7 +11,7 @@ describe.each`
   ${"final qamets-he"}                   | ${"מַלְכָּה"}                | ${"malka"}
   ${"divine name"}                       | ${"יְהוָ֣ה"}                 | ${"Adonaj"}
   ${"3ms suffix"}                        | ${"תֹּורֹתָֽיו"}             | ${"torotaw"}
-  ${"multiple words and passeq"}         | ${"כְּשֶׁ֣בֶת ׀ הַמֶּ֣לֶךְ"} | ${"keschewet | hamelech"}
+  ${"multiple words and passeq"}         | ${"כְּשֶׁ֣בֶת ׀ הַמֶּ֣לֶךְ"} | ${"keschewet hamelech"}
 `("$description", ({ description, hebrew, transliteration }) => {
   const heb = new Text(hebrew);
   const transliteratedHeb = heb.transliterate();
