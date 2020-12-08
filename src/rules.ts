@@ -6,17 +6,16 @@ const changeElementSplit = (input: string, split: RegExp, join: string) =>
 
 export const syllableRules = (syl: Syllable): string => {
   let returnTxt: string = "";
-  const taamei = /[\u{0590}-\u{05AF},\u{05BD},\u{05BF}]/u;
-  let sylTxt = syl.text.replace(taamei, "");
+  const taamim = /[\u{0590}-\u{05AF},\u{05BD},\u{05BF}]/u;
+  let sylTxt = syl.text.replace(taamim, "");
   // 3ms suffix
   const threeMSSuffix = /\u{05B8}\u{05D9}\u{05D5}/u;
   if (threeMSSuffix.test(sylTxt) && syl.isFinal) {
     returnTxt = changeElementSplit(sylTxt, threeMSSuffix, "aw");
   } else {
     syl.clusters.forEach((cluster) => {
-      // const taamei = /[\u{0590}-\u{05AF},\u{05BD},\u{05BF},\u{05C0},\u{05C3}]/u;
       let clusterTrans = cluster.text;
-      clusterTrans = clusterTrans.replace(taamei, "");
+      clusterTrans = clusterTrans.replace(taamim, "");
       /******************
        * SPIRANTIZATION
        ******************/

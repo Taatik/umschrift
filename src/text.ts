@@ -39,9 +39,11 @@ declare module "havarotjs/dist/text" {
 
 Text.prototype.transliterate = function (): string {
   const transliterationArr = this.words.map((word) => {
-    return `${word.whiteSpaceBefore}${word.transliterate()}${
-      word.whiteSpaceAfter
-    }`;
+    const wordTrans = word.transliterate();
+    if (wordTrans) {
+      return `${word.whiteSpaceBefore}${wordTrans}${word.whiteSpaceAfter}`;
+    }
+    return "";
   });
   const transliteration = transliterationArr.reduce((a, c) => a + c, "");
   return transliteration;
