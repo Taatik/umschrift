@@ -17,6 +17,7 @@ module.exports = {
     "@typescript-eslint",
   ],
   rules: {
+    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/prefer-regexp-exec": "off",
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": [
@@ -143,7 +144,7 @@ module.exports = {
     "no-irregular-whitespace": "off",
     "no-multiple-empty-lines": "off",
     "no-new-wrappers": "error",
-    "no-shadow": "error",
+    "no-shadow": "off",
     "no-throw-literal": "error",
     "no-trailing-spaces": "off",
     "no-undef-init": "error",
@@ -187,6 +188,7 @@ module.exports = {
       "always",
       {
         markers: ["/"],
+        block: { exceptions: ["*"] },
       },
     ],
     "use-isnan": "error",
