@@ -1,3 +1,5 @@
+![Umschirft](./hebraish-umschrift-2400.png)
+
 # Umschrift
 
 A tool for transliterating liturgical Hebrew texts to German.
@@ -12,7 +14,9 @@ Its purpose is to transliterate litrugical Hebrew into German orthography.
 
 ### npm
 
-`npm install umschrift`
+```
+npm install github:Taatik/umschrift
+```
 
 ### local
 
